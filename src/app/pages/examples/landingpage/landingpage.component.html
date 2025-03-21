@@ -1,0 +1,416 @@
+
+    <!-- Anchor for top of page -->
+    <a id="top"></a>
+    
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      [ngClass]="{'navbar-transparent': false}"
+      id="navbar-top"
+    >
+      <div class="container">
+        <div class="navbar-translate">
+          <!-- Brand/Title now links to top -->
+          <a class="navbar-brand" href="#top">
+            ECS 188
+          </a>
+          <button
+            class="navbar-toggler navbar-toggler"
+            type="button"
+            (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed"
+            aria-controls="navigation-index"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-bar bar1"></span>
+            <span class="navbar-toggler-bar bar2"></span>
+            <span class="navbar-toggler-bar bar3"></span>
+          </button>
+        </div>
+        <div
+          class="navbar-collapse justify-content-end"
+          [collapse]="isCollapsed"
+          id="navigation"
+        >
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="#top">ECS 188</a>
+              </div>
+              <div class="col-6 collapse-close text-right">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  (click)="isCollapsed = !isCollapsed"
+                  [attr.aria-expanded]="!isCollapsed"
+                  aria-label="Toggle navigation"
+                >
+                  <i class="tim-icons icon-simple-remove"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Nav Items with internal links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#top">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#schedule">Schedule</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#grading">Grading</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#textbooks">Textbooks</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="wrapper">
+      <!-- Page Header Section -->
+      <div class="page-header">
+        <!-- Decorative images (optional) -->
+        <img class="path" src="assets/img/blob.png" />
+        <img class="path2" src="assets/img/path2.png" />
+        <img class="shapes triangle" src="assets/img/triunghiuri.png" />
+        <img class="shapes wave" src="assets/img/waves.png" />
+        <img class="shapes squares" src="assets/img/patrat.png" />
+        <img class="shapes circle" src="assets/img/cercuri.png" />
+  
+        <div class="content-center">
+          <div
+            class="row row-grid justify-content-between align-items-center text-center text-md-left"
+          >
+            <div class="col-lg-8 col-md-8">
+              <h1 class="text-white">
+                ECS 188 <br />
+                <span class="text-white">Ethics in an Age of Technology</span>
+              </h1>
+              <p class="text-white mb-3">
+                This course examines moral reasoning, ethical theories, and their
+                application to contemporary issues in technology. We will explore
+                fundamental questions about what it means to make ethical decisions
+                in an era of rapid innovation.
+              </p>
+            </div>
+            <!-- Lottie Animation -->
+            <div class="col-lg-4 col-md-4 mt-4 mt-md-0 text-center">
+              <lottie-player
+                src="assets/animations/ethics-animation.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 300px; height: 300px;"
+              >
+              </lottie-player>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Schedule Section -->
+      <section class="section section-lg" id="schedule">
+        <div class="container">
+          <h2 class="text-center text-md-left">
+            Schedule & Assigned Readings
+          </h2>
+          <p class="text-center text-md-left">
+            We will cover <strong>10 chapters</strong> from the main textbook
+            (Gordon Graham, <em>Theories of Ethics</em>, 1st Edition), one chapter
+            per week, as indicated below.
+          </p>
+          <table class="table table-striped table-hover">
+            <thead class="text-primary">
+              <tr>
+                <th>Week</th>
+                <th>Topic</th>
+                <th>Assigned Reading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ethics, Truth, and Reason</td>
+                <td>Chapter 1</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Contractualism</td>
+                <td>Chapter 2</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Egoism</td>
+                <td>Chapter 3</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Hedonism</td>
+                <td>Chapter 4</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Naturalism and Virtue</td>
+                <td>Chapter 5</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Existentialism</td>
+                <td>Chapter 6</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Kantianism</td>
+                <td>Chapter 7</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Utilitarianism</td>
+                <td>Chapter 8</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Ethics and Environment</td>
+                <td>Chapter 9</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>
+                  Ethics, Religion, and the Meaning of Life
+                </td>
+                <td>Chapter 10</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+  
+      <!-- Grading Scheme Section -->
+      <section class="section section-lg" id="grading">
+        <div class="container">
+          <h2 class="text-center text-md-left">Grading Scheme</h2>
+          <p class="text-center text-md-left">
+            Below is the breakdown of how your final grade will be determined.
+          </p>
+          <table class="table table-striped table-hover">
+            <thead class="text-primary">
+              <tr>
+                <th>Assignment</th>
+                <th>Weight</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Pop-up Quizzes (Individual)</td>
+                <td>
+                  <span class="badge badge-info">15%</span>
+                </td>
+                <td>
+                  One quiz each week (Weeks 1–9), lowest score dropped. Quizzes
+                  cannot be retaken. If you miss one for a valid, documented reason,
+                  it won't count against your grade.
+                </td>
+              </tr>
+              <tr>
+                <td>Weekly Presentations (Team of 5)</td>
+                <td>
+                  <span class="badge badge-primary">25%</span>
+                </td>
+                <td>
+                  Weeks 2–9 (8 weeks), each team presents on relevant ethical issues
+                  &amp; readings, connecting them to applied ethics domains (Bioethics,
+                  Business Ethics, AI Ethics, etc.). 20–25 min with slides.
+                </td>
+              </tr>
+              <tr>
+                <td>Term Paper Presentations (Team of 2)</td>
+                <td>
+                  <span class="badge badge-primary">25%</span>
+                </td>
+                <td>
+                  Presentation in Week 10 on your final term paper and reflections on
+                  seminar takeaways.
+                </td>
+              </tr>
+              <tr>
+                <td>Term Paper (Team of 2)</td>
+                <td>
+                  <span class="badge badge-danger">35%</span>
+                </td>
+                <td>
+                  ~2000-word paper analyzing one (or multiple) ethical theories applied
+                  to a contemporary technological issue.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+  
+      <!-- Textbooks Section -->
+      <section class="section section-lg" id="textbooks">
+        <div class="container">
+          <div
+            class="row text-center text-md-left align-items-center"
+          >
+            <div class="col-md-8 mb-3 mb-md-0">
+              <h2>Required Textbook</h2>
+              <p>
+                Gordon Graham, <em>Theories of Ethics</em>, 1st Edition.
+              </p>
+              <h2>Alternative Textbooks (Optional Sources)</h2>
+              <ul>
+                <li>
+                  Lewis Vaughn, <em>Doing Ethics: Moral Reasoning and Contemporary Moral Issues</em>, 7th Edition.
+                </li>
+                <li>
+                  John Skorupski, <em>The Routledge Companion to Ethics</em>.
+                </li>
+                <li>
+                  Lewis Vaughn, <em>Deciding What's Right: A Practical Guide to Moral Theory</em>, 1st Edition.
+                </li>
+                <li>
+                  Jonathan Wolff, <em>An Introduction to Moral Philosophy</em>, 3rd Edition.
+                </li>
+                <li>
+                  Jonathan Wolff, <em>Readings in Moral Philosophy</em>, 2nd Edition.
+                </li>
+                <li>
+                  Louis P. Pojman and Peter Tramel, <em>Moral Philosophy: A Reader</em>, 4th Edition.
+                </li>
+              </ul>
+            </div>
+            <!-- Additional Lottie JSON next to required textbook -->
+            <div class="col-md-4 text-center">
+              <lottie-player
+                src="assets/animations/book-animation.json"
+                background="transparent"
+                speed="1"
+                loop
+                autoplay
+                style="width: 250px; height: 250px; margin-top: 30px;"
+              >
+              </lottie-player>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Footer -->
+      <footer
+        class="footer"
+        style="border-top: 5px solid #3842FF;"
+      >
+        <div class="container">
+          <div class="row text-center text-md-left">
+            <!-- Left column: Course & Rights -->
+            <div class="col-md-4 mb-3 text-center text-md-left">
+              <h1 class="title text-white">ECS 188</h1>
+              <p class="mt-1 text-white">Ethics in an Age of Technology</p>
+            </div>
+            <!-- Middle column: Instructor Info -->
+            <div class="col-md-4 mb-3 text-center text-md-left">
+              <h5 class="title text-white">About Instructor</h5>
+              <p class="mb-1 text-white">
+                <strong>Mohammad Sadoghi, PhD</strong>
+              </p>
+              <p class="mb-1 text-white">Associate Professor</p>
+              <p class="mb-1 text-white">Department of Computer Science</p>
+              <p class="mb-1 text-white">University of California, Davis</p>
+              <!-- Social / Academic Profiles -->
+              <div class="mt-3">
+                <!-- Update href links to actual profiles -->
+                <a
+                  href="https://scholar.google.ca/citations?user=Lx9fbJoAAAAJ"
+                  target="_blank"
+                  class="mr-3 text-white"
+                >
+                  <i class="fab fa-google"></i> Google Scholar
+                </a>
+                <a
+                  href="http://dblp.uni-trier.de/pers/hd/s/Sadoghi:Mohammad"
+                  target="_blank"
+                  class="mr-3 text-white"
+                >
+                  <i class="fa fa-database"></i> DBLP
+                </a>
+                <a
+                  href="https://www.researchgate.net/profile/Mohammad_Sadoghi"
+                  target="_blank"
+                  class="text-white"
+                >
+                  <i class="fa fa-graduation-cap"></i> ResearchGate
+                </a>
+              </div>
+            </div>
+            <!-- Right column: Contact Info -->
+            <div class="col-md-4 mb-3 text-center text-md-left">
+              <h5 class="title text-white">Contact Information</h5>
+              <p class="mb-1 text-white">
+                <strong>Address:</strong>
+                Kemper Hall • One Shields Avenue • Davis • 95616
+              </p>
+              <p class="mb-1 text-white">
+                <strong>Office:</strong> Kemper 3055
+              </p>
+              <p class="mb-1 text-white">
+                <strong>ExpoLab:</strong> Academic Surge 2392
+              </p>
+              <p class="mb-1 text-white">
+                <strong>Email:</strong> <a href="mailto:msadoghi@ucdavis" class="text-white"> msadoghi@ucdavis.edu</a>
+              </p>
+              <!-- UC Davis Logo (Update path as needed) -->
+              <div class="mt-3">
+                <img
+                  src="assets/img/ucdavis.png"
+                  alt="UC Davis"
+                  class="img-fluid"
+                  style="max-width: 150px;"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Bottom row for copyright -->
+          <div class="row mt-3">
+            <div class="col-12 text-center">
+              <p class="text-white">
+                © 2025 ECS 188 - All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  
+    <!-- Script to highlight active nav link based on scroll position -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(
+          '.navbar-nav a[href^="#"]'
+        );
+  
+        function onScroll() {
+          const scrollPos = window.scrollY + 80; // offset for fixed nav
+          navLinks.forEach((link) => {
+            const section = document.querySelector(
+              link.getAttribute("href")
+            );
+            if (section) {
+              const top = section.offsetTop;
+              const bottom = top + section.offsetHeight;
+              if (scrollPos >= top && scrollPos < bottom) {
+                link.classList.add("active");
+              } else {
+                link.classList.remove("active");
+              }
+            }
+          });
+        }
+        window.addEventListener("scroll", onScroll);
+        onScroll(); // highlight current on load
+      });
+    </script>
