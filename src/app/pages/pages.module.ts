@@ -17,10 +17,7 @@ import { ModalModule } from "ngx-bootstrap/modal";
 import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { PopoverModule } from "ngx-bootstrap/popover";
 
-import { IndexComponent } from "./index/index.component";
-import { ProfilepageComponent } from "./examples/profilepage/profilepage.component";
-import { RegisterpageComponent } from "./examples/registerpage/registerpage.component";
-import { LandingpageComponent } from "./examples/landingpage/landingpage.component";
+import { LandingpageComponent } from "./index/landingpage.component";
 
 @NgModule({
   imports: [
@@ -42,16 +39,10 @@ import { LandingpageComponent } from "./examples/landingpage/landingpage.compone
     ModalModule.forRoot()
   ],
   declarations: [
-    IndexComponent,
-    ProfilepageComponent,
-    RegisterpageComponent,
-    LandingpageComponent
+    LandingpageComponent,
   ],
   exports: [
-    IndexComponent,
-    ProfilepageComponent,
-    RegisterpageComponent,
-    LandingpageComponent
+    LandingpageComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: []
