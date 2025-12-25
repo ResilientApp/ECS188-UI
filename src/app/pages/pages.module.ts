@@ -18,6 +18,7 @@ import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { PopoverModule } from "ngx-bootstrap/popover";
 
 import { LandingpageComponent } from "./index/landingpage.component";
+import { Winter2026Component } from "./winter2026/landingpage.component";
 
 @NgModule({
   imports: [
@@ -40,9 +41,11 @@ import { LandingpageComponent } from "./index/landingpage.component";
   ],
   declarations: [
     LandingpageComponent,
+    Winter2026Component,
   ],
   exports: [
     LandingpageComponent,
+    Winter2026Component,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: []
