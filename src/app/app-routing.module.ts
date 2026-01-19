@@ -8,10 +8,9 @@ import { Winter2026Component } from "./pages/winter2026/landingpage.component";
 
 const routes: Routes = [
   { path: "", component: Winter2026Component, pathMatch: "full" },
-  // { path: "2025", component: LandingpageComponent, pathMatch: "full" },
   { path: "2025", component: LandingpageComponent, pathMatch: "full" },
-  { path: "**", component: Winter2026Component, pathMatch: "full" },
   { path: "2026", component: Winter2026Component, pathMatch: "full" },
+  { path: "**", component: Winter2026Component},
 ];
 
 @NgModule({
@@ -19,7 +18,9 @@ const routes: Routes = [
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes, {
-      useHash: true
+      useHash: true,
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
     })
   ],
   exports: []
